@@ -100,6 +100,7 @@ var VipThreshold = 1000;
 var Vip =total >= vipThreshold ? true : false;
 var discount = total >= vipThreshold ?"0.05%" : "0.0%";
 Console.WriteLine(discount);
+
 Console.ReadKey();
 static bool Check()
 {
