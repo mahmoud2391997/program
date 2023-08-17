@@ -228,69 +228,90 @@
 //        }
 //    }
 //}
-using System;
-namespace Program1
-{ 
- class Program {
+//using System;
+//namespace Program1
+//{ 
+// class Program {
 
-        static void Main(string[] args)
-        {
-            Int32 x; //int x; => 32 bit
-            Int16 s; //short s; => 16 bit
-            Int64 l; //long l; => 64 bit
-            short sh; //-32767 > 32768
-            ushort ush; // 0 - 65???;
-            UInt16 uns;
-            //object
-            var num = 10;
-            string str = "10";
-            // int num2 = str; {invalid} because it's a strongly typed language
-            int numberInt = 100;
-            long numberLong = numberInt;
-            long nl = 1000;
-            if (nl <= Int32.MaxValue)
-            {
-                int nI = (int)nl;
-            }
-            double d = 1234.1;
-            int I = (int)d;
-            Console.WriteLine(I);
+//        static void Main(string[] args)
+//        {
+//            Int32 x; //int x; => 32 bit
+//            Int16 s; //short s; => 16 bit
+//            Int64 l; //long l; => 64 bit
+//            short sh; //-32767 > 32768
+//            ushort ush; // 0 - 65???;
+//            UInt16 uns;
+//            //object
+//            var num = 10;
+//            string str = "10";
+//            // int num2 = str; {invalid} because it's a strongly typed language
+//            int numberInt = 100;
+//            long numberLong = numberInt;
+//            long nl = 1000;
+//            if (nl <= Int32.MaxValue)
+//            {
+//                int nI = (int)nl;
+//            }
+//            double d = 1234.1;
+//            int I = (int)d;
+//            Console.WriteLine(I);
 
-            //Boxing , UnBoxing
-            int X = 10;//value type
-            object obj; //refrence type
-            obj = X; //conversion done implicitly (boxing)
-            int y = (int)obj; //unboxing
-            //Int32(int) - Int64 (long)
-            string stringValue = "120";
-            int number = int.Parse(stringValue);
-            Console.WriteLine(number);
-            string Stringvalue = "999999999999";
-            //  int Number = int.Parse(Stringvalue); Value is too large  for an Int32.'
-            if (int.TryParse(Stringvalue, out int Number))
-            {
-                Console.WriteLine(Number);
-            }
-            else
-            {
-                Console.WriteLine("invalid number provided or doesn't fit integer");
-            }
-            // 1) type.parse() => int.Parse(), double.Parse()....
-            //    var P = Convert.ToInt32(Stringvalue);  Value is too large  for an Int32
-            string StringValue = "dsjk";
-            //    var P = Convert.ToInt32(StringValue); value doesn't fit Int32
+//            //Boxing , UnBoxing
+//            int X = 10;//value type
+//            object obj; //refrence type
+//            obj = X; //conversion done implicitly (boxing)
+//            int y = (int)obj; //unboxing
+//            //Int32(int) - Int64 (long)
+//            string stringValue = "120";
+//            int number = int.Parse(stringValue);
+//            Console.WriteLine(number);
+//            string Stringvalue = "999999999999";
+//            //  int Number = int.Parse(Stringvalue); Value is too large  for an Int32.'
+//            if (int.TryParse(Stringvalue, out int Number))
+//            {
+//                Console.WriteLine(Number);
+//            }
+//            else
+//            {
+//                Console.WriteLine("invalid number provided or doesn't fit integer");
+//            }
+//            // 1) type.parse() => int.Parse(), double.Parse()....
+//            //    var P = Convert.ToInt32(Stringvalue);  Value is too large  for an Int32
+//            string StringValue = "dsjk";
+//            //    var P = Convert.ToInt32(StringValue); value doesn't fit Int32
 
-            //BitConverter
-            var NUM = 255;
-            var bytes = BitConverter.GetBytes(NUM);
-            foreach (var b in bytes)
-            {
-                var binary = Convert.ToString(b, 2).PadLeft(8, '0');
-                Console.WriteLine(binary);
-        }
-            Console.ReadKey();
+//            //BitConverter
+//            var NUM = 255;
+//            var bytes = BitConverter.GetBytes(NUM);
+//            foreach (var b in bytes)
+//            {
+//                var binary = Convert.ToString(b, 2).PadLeft(8, '0');
+//                Console.WriteLine(binary);
+//        }
+//            var NAME = "Mahmoud";
+//            char[] letters = NAME.ToCharArray();
+//            foreach (var L in letters)
+//            {
+//                int ascii = Convert.ToInt32(L);
+//                var output = $"'{L}' → ASCII:{ascii}, Binary:{Convert.ToString(ascii, 2).PadLeft(8, '0')},{ascii:x}";
+//                Console.WriteLine(output);
+//            }
+//            string[] hexValues = { "4d", "61", "68", "6d", "6f", "75" ,"64" };
+//            foreach (var hex in hexValues)
+//            {
+//                int value = Convert.ToInt32(hex, 16);
+//                var stringvalue = Char.ConvertFromUtf32(value); //#1
+//                var ch = (char)value;//#2
+//                Console.WriteLine(stringvalue);
+//                Console.WriteLine(ch);
+//            }
+//            var hexa = "8E2";
+//            int no = Int32.Parse(hexa, System.Globalization.NumberStyles.HexNumber);
+//            Console.WriteLine(no);
+
+//            Console.ReadKey();
 
 
-    }
+//    }
 
-}}
+//}}
